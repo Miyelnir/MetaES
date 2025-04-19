@@ -58,6 +58,14 @@ builder.defineMetaHandler(async ({ type, id }) => {
   return { meta }
 })
 
+serveHTTP(builder.getInterface(), {
+  port,
+  middleware: (req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    next();
+  }
+})
+
 const port = process.env.PORT || 7000
 serveHTTP(builder.getInterface(), { port })
 console.log("MetaES activo en http://localhost:" + port + "/manifest.json")
