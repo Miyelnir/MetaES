@@ -1,0 +1,24 @@
+{
+  "id": "org.metaes.addon",
+  "version": "1.0.0",
+  "name": "MetaES",
+  "description": "Addon que traduce automáticamente los metadatos del addon Cinemeta al español.",
+  "logo": "https://upload.wikimedia.org/wikipedia/en/9/9a/Spain_magazine_flag_icon.png",
+  "background": "https://upload.wikimedia.org/wikipedia/en/9/9a/Spain_magazine_flag_icon.png",
+  "resources": ["catalog", "meta"],
+  "types": ["movie", "series"],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "top",
+      "name": "Películas Populares",
+      "extra": [{ "name": "search" }]
+    },
+    {
+      "type": "series",
+      "id": "top",
+      "name": "Series Populares",
+      "extra": [{ "name": "search" }]
+    }
+  ]
+}
